@@ -23,6 +23,8 @@
           <th>Email</th>
           <th>Contact</th>
           <th>Address</th>
+          <th>AppointmentDate</th>
+          <th>Time</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
@@ -33,6 +35,8 @@
           <td>{{appointment.email}}</td>
           <td>{{appointment.contact}}</td>
           <td>{{appointment.address}}</td>
+          <td>{{appointment.date | date:'dd/MM/yyyy'}}</td>
+          <td>{{appointment.time }}</td>
           <td>
             <span class="status-badge" [ngClass]="appointment.status">
               {{appointment.status}}

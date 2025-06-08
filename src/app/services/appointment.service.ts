@@ -10,6 +10,8 @@ export interface Appointment {
   contact: string;
   address: string;
   status: 'pending' | 'approved' | 'rejected';
+  date: string;
+  time: string;
 }
 
 @Injectable({

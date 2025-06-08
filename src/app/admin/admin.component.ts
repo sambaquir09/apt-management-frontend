@@ -41,6 +41,8 @@ import { AppointmentService, Appointment } from '../services/appointment.service
               <th>Email</th>
               <th>Contact</th>
               <th>Address</th>
+              <th>AppointmentDate</th>
+              <th>Time</th>
               <th>Status</th>
               <th>Actions</th>
             </tr>
@@ -51,6 +53,8 @@ import { AppointmentService, Appointment } from '../services/appointment.service
               <td>{{appointment.email}}</td>
               <td>{{appointment.contact}}</td>
               <td>{{appointment.address}}</td>
+              <td>{{appointment.date | date:'dd/MM/yyyy'}}</td>
+              <td>{{appointment.time | date:'h:mm a':'UTC' }}</td>
               <td>
                 <span class="status-badge" [ngClass]="appointment.status">
                   {{appointment.status}}

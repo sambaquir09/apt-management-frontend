@@ -11,8 +11,8 @@ import { AdminComponent } from './admin/admin.component';
   template: `
     <div class="app-container">
       <nav class="nav-menu">
-        <!-- <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Appointment Form</a>
-        <a routerLink="/admin" routerLinkActive="active">Admin Dashboard</a> -->
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Appointment Form</a>
+        <a routerLink="/admin" routerLinkActive="active">Admin Dashboard</a> 
       </nav>
       <router-outlet></router-outlet>
     </div>

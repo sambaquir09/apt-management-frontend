@@ -31,6 +31,16 @@ import { AppointmentService } from '../services/appointment.service';
           <textarea id="address" name="address" [(ngModel)]="formData.address" placeholder="Enter your address" required></textarea>
         </div>
 
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" [(ngModel)]="formData.date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" [(ngModel)]="formData.time" required>
+        </div>
+
         <button type="submit" [disabled]="isSubmitting">
           {{ isSubmitting ? 'Submitting...' : 'Submit' }}
         </button>
@@ -130,7 +140,9 @@ export class AppointmentFormComponent {
     name: '',
     email: '',
     contact: '',
-    address: ''
+    address: '',
+    date: '',
+    time: ''
   };
 
   isSubmitting = false;
@@ -146,7 +158,7 @@ export class AppointmentFormComponent {
 
     const appointmentData = {
       ...this.formData,
-      status: 'pending' as const
+      status: 'pending' as const,
     };
 
     this.appointmentService.createAppointment(appointmentData).subscribe({
@@ -171,7 +183,9 @@ export class AppointmentFormComponent {
       name: '',
       email: '',
       contact: '',
-      address: ''
+      address: '',
+      date: '',
+      time: ''
     };
   }
 } 
